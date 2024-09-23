@@ -5,17 +5,7 @@ Created on Mon Sep 23 17:01:40 2024
 @author: LOKESH
 """
 import streamlit as st
-st.markdown(
-    """
-    <style>
-    .stSelectbox div[data-baseweb="select"] {
-        background-color: #111111;
-        border-radius: 10px;
-    }
-    </style>
-    """, 
-    unsafe_allow_html=True
-)
+
 selected = st.sidebar.selectbox(
     "Main Menu", 
     ["assignment 0.1", "assignment 1.0"]
