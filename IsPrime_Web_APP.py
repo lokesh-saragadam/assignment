@@ -29,13 +29,13 @@ with tab1:
    def main():
      st.title("Check if a number is a prime number")
        
-     number = st.number_input("enter the number here")
+     number = st.number_input("enter the number here(only integers pls)")
      answer = ''
      if st.button("check"):
          
         if(number >= 2**31):
            print("range exceeded")
-        answer  = is_prime(number) 
+        answer  = is_prime(int(number)) 
      st.success(answer)  
 
    if __name__ == '__main__' :
