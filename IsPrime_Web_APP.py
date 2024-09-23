@@ -5,13 +5,11 @@ Created on Mon Sep 23 17:01:40 2024
 @author: LOKESH
 """
 import streamlit as st
-from streamlit_option_menu import option_menu
 
-with st.sidebar:
-    selected = option_menu("assignments",
-                           ['assignment 0.1',
-                            'assignment 1.0'],
-                           default_index=0)
+selected = st.sidebar.radio(
+    "Main Menu", 
+    ["Home", "About", "Contact"]
+)
     
 if (selected == 'assignment 0.1'):
    st.title('Assignment 0.1')
