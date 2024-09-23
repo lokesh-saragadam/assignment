@@ -43,7 +43,7 @@ if (selected == 'assignment 1.0'):
       
 with tab2:
     st.title("About Us")
-    ourself = """We are,
+    ourself = """We are,\n
                  CH23BTECH11040-Saragadam Lokesh \n
                  CH23BTECH11040-Vardan Gupta \n"""
     st.write(ourself)
