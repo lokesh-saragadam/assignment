@@ -6,7 +6,7 @@ Created on Mon Sep 23 17:01:40 2024
 """
 import streamlit as st
 
-selected = st.sidebar.radio(
+selected = st.sidebar.selectbox(
     "Main Menu", 
     ["assignment 0.1", "assignment 1.0"]
 )
