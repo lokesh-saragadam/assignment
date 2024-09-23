@@ -9,7 +9,7 @@ st.markdown(
     """
     <style>
     .stSelectbox div[data-baseweb="select"] {
-        background-color: #000000;
+        background-color: #111111;
         border-radius: 10px;
     }
     </style>
