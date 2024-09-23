@@ -43,14 +43,14 @@ if (selected == 'assignment 1.0'):
       
 with tab2:
     st.title("About Us")
-    ourself = """We are,\n
+    ourself = """We are, \n
                  CH23BTECH11040-Saragadam Lokesh 
     CH23BTECH11044-Vardan Gupta \n"""
     st.write(ourself)
 with tab3:
     st.title("Contact Us")
     st.write("""email ids:
-    ch23btech11040@iit.ac.in,\n ch23btech11044@iith.ac.in""")     
+    ch23btech11040@iit.ac.in, \n ch23btech11044@iith.ac.in""")     
 
 
 
