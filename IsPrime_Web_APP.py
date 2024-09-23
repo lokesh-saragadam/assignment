@@ -8,7 +8,7 @@ import streamlit as st
 
 selected = st.sidebar.radio(
     "Main Menu", 
-    ["Home", "About", "Contact"]
+    ["assignment 0.1", "assignment 1.0"]
 )
     
 if (selected == 'assignment 0.1'):
