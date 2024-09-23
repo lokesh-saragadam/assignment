@@ -15,12 +15,7 @@ tab1, tab2, tab3 = st.tabs(["Home", "About", "Contact"])
 # Display content in tabs
 with tab1:
     st.title("Welcome to the Home Page")
-with tab2:
-    st.title("About Us")
-    st.write("This is the About section.")
-with tab3:
-    st.title("Contact Us")
-    st.write("This is the Contact section.")    
+   
 if (selected == 'assignment 0.1'):
    st.title('Assignment 0.1')
    def is_prime(n):
@@ -46,7 +41,12 @@ if (selected == 'assignment 0.1'):
 if (selected == 'assignment 1.0'):
    st.title('Assignment 1.0')
       
-    
+with tab2:
+    st.title("About Us")
+    st.write("we are ch23btech11040,44,34,37")
+with tab3:
+    st.title("Contact Us")
+    st.write("This is the Contact section.")     
 
 
 
