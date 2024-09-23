@@ -5,7 +5,7 @@ Created on Mon Sep 23 17:01:40 2024
 @author: LOKESH
 """
 import streamlit as st
-from streamlit-option-menu import option_menu
+from streamlit_option_menu import option_menu
 
 with st.sidebar:
     selected = option_menu("assignments",
