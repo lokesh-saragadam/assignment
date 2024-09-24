@@ -52,14 +52,19 @@ with tab2:
     CH23BTECH11034-Rahul Patil
     CH23BTECH11037-Saket Kashyap
     CH23BTECH11031-Nakul patole
-    ESs3BTECH11026-Harsh
+    ES23BTECH11026-Harsh
     \n"""
     st.write(ourself)
 with tab3:
     st.title("Contact Us")
     st.write("""email ids: \n
-    ch23btech11040@iit.ac.in \n ch23btech11044@iith.ac.in \n 
-    ch23btech11034@iith.ac.in \n """)     
+    ch23btech11040@iit.ac.in
+    ch23btech11044@iith.ac.in 
+    ch23btech11034@iith.ac.in
+    ch23btech11037@iith.ac.in
+    ch23btech11031@iith.ac.in
+    es23btech11026@iith.ac.in
+    \n """)     
 
 
 
