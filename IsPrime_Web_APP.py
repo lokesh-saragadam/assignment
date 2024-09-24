@@ -48,7 +48,12 @@ with tab2:
     st.title("About Us")
     ourself = """We are, \n
                  CH23BTECH11040-Saragadam Lokesh 
-    CH23BTECH11044-Vardan Gupta \n"""
+    CH23BTECH11044-Vardan Gupta
+    CH23BTECH11034-Rahul Patil
+    CH23BTECH11037-Saket Kashyap
+    CH23BTECH11031-Nakul patole
+    ESs3BTECH11026-Harsh
+    \n"""
     st.write(ourself)
 with tab3:
     st.title("Contact Us")
