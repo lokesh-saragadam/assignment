@@ -17,6 +17,7 @@ tab1, tab2, tab3 = st.tabs(["Home", "About", "Contact"])
 with tab1:
  st.title("Welcome to the Home Page")
  
+ st.image("https://via.placeholder.com/150", caption="Example Image")
  if (selected == 'assignment 0.1'):
    st.title('Assignment 0.1')
    def is_prime(n):
