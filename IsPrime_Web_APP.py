@@ -39,7 +39,7 @@ with tab1:
         answer  = is_prime(int(number)) 
         with st.spinner('Wait for it...'):
          time.sleep(5)
-     st.success(answer)  
+        st.success(answer)  
 
    if __name__ == '__main__' :
     main() 
