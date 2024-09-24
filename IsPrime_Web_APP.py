@@ -8,7 +8,7 @@ import streamlit as st
 
 selected = st.sidebar.selectbox(
     "Main Menu", 
-    ["assignment 0.1", "assignment 1.0"]
+    ["assignment 0.1"]
 )
 tab1, tab2, tab3 = st.tabs(["Home", "About", "Contact"])
 
@@ -41,8 +41,7 @@ with tab1:
    if __name__ == '__main__' :
     main() 
     
-if (selected == 'assignment 1.0'):
-   st.title('Assignment 1.0')
+
       
 with tab2:
     st.title("About Us")
