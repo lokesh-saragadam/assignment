@@ -5,6 +5,7 @@ Created on Mon Sep 23 17:01:40 2024
 @author: LOKESH
 """
 import streamlit as st
+import time
 
 selected = st.sidebar.selectbox(
     "Main Menu", 
@@ -15,7 +16,7 @@ tab1, tab2, tab3 = st.tabs(["Home", "About", "Contact"])
 # Display content in tabs
 with tab1:
  st.title("Welcome to the Home Page")
-   
+ 
  if (selected == 'assignment 0.1'):
    st.title('Assignment 0.1')
    def is_prime(n):
@@ -32,10 +33,12 @@ with tab1:
      number = st.number_input("enter the number here(only integers pls)")
      answer = ''
      if st.button("check"):
-         
+           
         if(number >= 2**31):
            print("range exceeded")
         answer  = is_prime(int(number)) 
+        with st.spinner('Wait for it...'):
+         time.sleep(5)
      st.success(answer)  
 
    if __name__ == '__main__' :
