@@ -38,7 +38,7 @@ with tab1:
            print("range exceeded")
         answer  = is_prime(int(number)) 
      with st.spinner('Wait for it...'):
-          time.sleep(5)
+          time.sleep(2)
      st.success(answer)  
 
    if __name__ == '__main__' :
