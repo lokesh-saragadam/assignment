@@ -15,7 +15,7 @@ tab1, tab2, tab3 = st.tabs(["Home", "About", "Contact"])
 
 # Display content in tabs
 with tab1:
- st.title("Welcome to the Home Page")
+   st.title("Welcome to the Home Page")
  
    st.image("https://media.giphy.com/media/26xBwdIuRJiAIqHwA/giphy.gif", caption="Sample GIF") if (selected == 'assignment 0.1'):
    st.title('Assignment 0.1')
