@@ -104,7 +104,7 @@ def create_hilbert_matrix(n):
     hilbert_matrix = np.zeros((n, n))
     for i in range(n):
         for j in range(n):
-            hilbert_matrix[i][j] = 1 / (i + j + 1)
+            hilbert_matrix[i][j] = 1 / (i + j - 1)
     return hilbert_matrix
 
 # Solve system (Ax = b) with LU decomposition
