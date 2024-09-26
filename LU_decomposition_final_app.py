@@ -217,7 +217,7 @@ option = st.sidebar.selectbox("Choose an operation", [
 
 st.title("Assignment 1.0")
 # File uploader for matrix A (Optional CSV upload)
-uploaded_file = st.sidebar.file_uploader("Upload a CSV file for matrix A(prefferably a converging one)", type="csv")
+uploaded_file = st.sidebar.file_uploader("Upload a CSV file for matrix A(Apply the file as given in the input file 5 rows of 5 columns for matrix A and 2 rows just below the matrix for vector b1 and b2 respectively as in the input file)", type="csv")
 
 if uploaded_file is not None:
     b_vector1 = None
