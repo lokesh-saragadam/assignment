@@ -2,6 +2,9 @@ import numpy as np
 import sympy as sp
 import streamlit as st
 import pandas as pd
+tab1, tab2, tab3 = st.tabs(["Home", "About", "Contact"])
+
+# Display content in tabs
 
 # LU decomposition function
 st.markdown(
@@ -214,12 +217,13 @@ option = st.sidebar.selectbox("Choose an operation", [
     "💻 Eigenvalues by Power Method and Jordan Technique",
     "🚀 Solving (Ax=b) with LU Decomposition"
 ])
-
-st.title("Assignment 1.0")
+with tab1:
+ st.title("Welcome to the Home Page")
+ st.title("Assignment 1.0")
 # File uploader for matrix A (Optional CSV upload)
-uploaded_file = st.sidebar.file_uploader("Upload a CSV file for matrix A(Apply the file as given in the input file 5 rows of 5 columns for matrix A and 2 rows just below the matrix for vector b1 and b2 respectively as in the input file)", type="csv")
+ uploaded_file = st.sidebar.file_uploader("Upload a CSV file for matrix A(Apply the file as given in the input file 5 rows of 5 columns for matrix A and 2 rows just below the matrix for vector b1 and b2 respectively as in the input file)", type="csv")
 
-if uploaded_file is not None:
+ if uploaded_file is not None:
     b_vector1 = None
     b_vector2 = None
     data = pd.read_csv(uploaded_file, header=None)
@@ -250,7 +254,7 @@ if uploaded_file is not None:
                 st.subheader("Vector b2:")
                 st.write(b_vector2)
 
-else:
+ else:
     # Default matrix A for demonstration
     A = np.array([
         [4, 1, -2, 2, 3],
@@ -278,7 +282,7 @@ else:
                 st.write(b_vector2)
 
 
-if option == "🚀 Eigenvalues by LU Method":
+ if option == "🚀 Eigenvalues by LU Method":
     eigenvalues = UL_eigen(A)
     
     st.markdown(
@@ -291,14 +295,14 @@ if option == "🚀 Eigenvalues by LU Method":
     unsafe_allow_html=True
     )
 
-elif option == "💻 Determinant and System Uniqueness":
+ elif option == "💻 Determinant and System Uniqueness":
     eigenvalues = UL_eigen(A)
     det = calculate_determinant(eigenvalues)
     uniqueness = check_uniqueness(det)
     st.subheader(f"Determinant: {det}")
     st.success(uniqueness)
 
-elif option == "🎮 Condition Number Comparison":
+ elif option == "🎮 Condition Number Comparison":
     eigenvalues = UL_eigen(A)
     cond_matrix = condition_number(eigenvalues)
     
@@ -318,14 +322,14 @@ elif option == "🎮 Condition Number Comparison":
     else:
         st.success("Matrix A is well-conditioned.")
 
-elif option == "📱 Polynomial Equation and Eigenvalues":
+ elif option == "📱 Polynomial Equation and Eigenvalues":
     eigenvalues = UL_eigen(A)
     polynomial = construct_polynomial(eigenvalues)
     st.markdown('<p class="custom-subheader">Characteristic Polynomial is: </p>', unsafe_allow_html=True)
     st.latex(rf"{polynomial}")
     
 
-elif option == "💻 Eigenvalues by Power Method and Jordan Technique":
+ elif option == "💻 Eigenvalues by Power Method and Jordan Technique":
     x0 = np.array([1,1,1,1,1])
     leigenvalue, eigenvector = power_method(A,x0)
     st.subheader(f"Largest Eigenvalue: {leigenvalue}")
@@ -346,7 +350,7 @@ elif option == "💻 Eigenvalues by Power Method and Jordan Technique":
     except ValueError as e:
         st.error(e)
 
-elif option == "🚀 Solving (Ax=b) with LU Decomposition":
+ elif option == "🚀 Solving (Ax=b) with LU Decomposition":
     # Assume vector b as [1, 2, 3, 4, 5] for demonstration
     
     L, U = lud(A)
@@ -359,3 +363,24 @@ elif option == "🚀 Solving (Ax=b) with LU Decomposition":
     with co2: 
      st.subheader(f"Solution x2 for Ax=b2:")
      st.write(x1)
+with tab2:
+    st.title("About Us")
+    ourself = """We are, \n
+                 CH23BTECH11040-Saragadam Lokesh 
+    CH23BTECH11044-Vardan Gupta
+    CH23BTECH11034-Rahul Patil
+    CH23BTECH11037-Saket Kashyap
+    CH23BTECH11031-Nakul patole
+    ES23BTECH11026-Harsh
+    \n"""
+    st.write(ourself)
+with tab3:
+    st.title("Contact Us")
+    st.write("""email ids: \n
+    ch23btech11040@iit.ac.in
+    ch23btech11044@iith.ac.in 
+    ch23btech11034@iith.ac.in
+    ch23btech11037@iith.ac.in
+    ch23btech11031@iith.ac.in
+    es23btech11026@iith.ac.in
+    \n """)    
