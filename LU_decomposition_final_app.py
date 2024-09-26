@@ -375,7 +375,7 @@ with tab2:
     CH23BTECH11034-Rahul Patil
     CH23BTECH11037-Saket Kashyap
     CH23BTECH11031-Nakul Patole
-    ES23BTECH11026-Harshwardhan Matker
+    ES23BTECH11026-Harshwardhan Matkar
     \n"""
     st.write(ourself)
 with tab3:
