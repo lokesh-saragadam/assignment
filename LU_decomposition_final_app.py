@@ -338,7 +338,8 @@ with tab1:
     col1, col2 ,col3= st.columns(3)   
     st.markdown('<p class="custom-subheader">Comparing Eigenvalues:\n</p>', unsafe_allow_html=True)
     with col1:    
-     st.write(f"Eigenvalues (UL Method): {UL_eigen(A)}\n")
+     st.write(f"Eigenvalues (UL Method): \n")
+     st.write(UL_eigen(A)) 
     with col2:     
      st.write(f"Largest Eigenvalue (Power Method): \n")
      st.write(leigenvalue)
