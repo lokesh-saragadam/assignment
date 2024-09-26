@@ -335,10 +335,11 @@ with tab1:
         smallest_eigenvalue, eigenvector = result
         st.subheader(f"Smallest Eigenvalue: {smallest_eigenvalue}")
         st.write("Corresponding Eigenvector:", eigenvector)
-    col1, col2 ,col3= st.columns(3)   
+      
     st.markdown('<p class="custom-subheader">Comparing Eigenvalues:\n</p>', unsafe_allow_html=True)
-    with col1:    
-     st.write(f"Eigenvalues (UL Method): \n")
+     col1, col2 ,col3= st.columns(3) 
+    with col1:
+     st.markdown('<p class="custom-subheader">Eigenvalues (UL Method): \n</p>', unsafe_allow_html=True)
      st.write(UL_eigen(A)) 
     with col2:     
      st.write(f"Largest Eigenvalue (Power Method): \n")
