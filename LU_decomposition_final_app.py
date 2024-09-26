@@ -377,7 +377,7 @@ with tab2:
 with tab3:
     st.title("Contact Us")
     st.write("""email ids: \n
-    ch23btech11040@iit.ac.in
+    ch23btech11040@iith.ac.in
     ch23btech11044@iith.ac.in 
     ch23btech11034@iith.ac.in
     ch23btech11037@iith.ac.in
