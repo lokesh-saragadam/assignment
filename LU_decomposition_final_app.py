@@ -89,8 +89,8 @@ def construct_polynomial(eigenvalues):
     return formatted_str+"= 0"
 
 # Function to calculate condition number from eigenvalues
-def condition_number(eigenvalues):
-    return np.max(np.abs(eigenvalues)) / np.min(np.abs(eigenvalues))
+def condition_number(A):
+    return np.linalg.cond(A)
 
 # Manually create a Hilbert matrix of size n
 def create_hilbert_matrix(n):
@@ -296,12 +296,11 @@ with tab1:
     st.success(uniqueness)
 
  elif option == "🎮 Condition Number Comparison":
-    eigenvalues = UL_eigen(A)
-    cond_matrix = condition_number(eigenvalues)
+    cond_matrix = condition_number(A)
     
     n=5
     hilbert_matrix = create_hilbert_matrix(n)
-    cond_hilbert = condition_number(UL_eigen(hilbert_matrix))  # Using the LU method for Hilbert matrix
+    cond_hilbert = condition_number(hilbert_matrix)  # Using the LU method for Hilbert matrix
     
     
 
