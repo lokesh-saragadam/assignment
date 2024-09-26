@@ -337,7 +337,7 @@ with tab1:
         st.write("Corresponding Eigenvector:", eigenvector)
       
     st.markdown('<p class="custom-subheader">Comparing Eigenvalues:\n</p>', unsafe_allow_html=True)
-     col1, col2 ,col3= st.columns(3) 
+    col1, col2 ,col3= st.columns(3) 
     with col1:
      st.markdown('<p class="custom-subheader">Eigenvalues (UL Method): \n</p>', unsafe_allow_html=True)
      st.write(UL_eigen(A)) 
