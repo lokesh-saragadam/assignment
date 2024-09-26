@@ -334,13 +334,17 @@ with tab1:
         smallest_eigenvalue, eigenvector = result
         st.subheader(f"Smallest Eigenvalue: {smallest_eigenvalue}")
         st.write("Corresponding Eigenvector:", eigenvector)
-
+    print("Comparing Eigenvalues:\n")
+    print(f"Eigenvalues (UL Method): {eigenvalues}\n")
+    print(f"Largest Eigenvalue (Power Method): {leigenvalue}\n")
+    print(f"Smallest Eigenvalue (Inverse Power Method): {smallest_eigenvalue}\n")
     try:
         A_inv = gauss_jordan_inverse(A)
         st.subheader("Inverse of matrix A:")
         st.write(A_inv)
     except ValueError as e:
         st.error(e)
+        
 
  elif option == "🚀 Solving (Ax=b) with LU Decomposition":
     # Assume vector b as [1, 2, 3, 4, 5] for demonstration
