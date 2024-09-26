@@ -299,8 +299,8 @@ with tab1:
     eigenvalues = UL_eigen(A)
     cond_matrix = condition_number(eigenvalues)
     
-    n=A.np.shape()
-    hilbert_matrix = create_hilbert_matrix(n[0])
+    n=A.Shape[0]
+    hilbert_matrix = create_hilbert_matrix(n)
     cond_hilbert = condition_number(UL_eigen(hilbert_matrix))  # Using the LU method for Hilbert matrix
     
     
