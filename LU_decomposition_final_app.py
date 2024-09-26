@@ -370,8 +370,8 @@ with tab2:
     CH23BTECH11044-Vardan Gupta
     CH23BTECH11034-Rahul Patil
     CH23BTECH11037-Saket Kashyap
-    CH23BTECH11031-Nakul patole
-    ES23BTECH11026-Harsh
+    CH23BTECH11031-Nakul Patole
+    ES23BTECH11026-Harshwardhan Matker
     \n"""
     st.write(ourself)
 with tab3:
