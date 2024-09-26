@@ -18,13 +18,6 @@ st.markdown(
     </style>
     """, unsafe_allow_html=True
 )
-
-# Define the matrix A
-A = np.array([[4, 2, 1],
-              [2, 5, 3],
-              [1, 3, 6]])
-
-# Function for LU decomposition
 def lud(A):
     n = A.shape[0]
     L = np.zeros_like(A)
