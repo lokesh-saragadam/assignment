@@ -215,12 +215,12 @@ option = st.sidebar.selectbox("Choose an operation", [
     "🚀 Solving (Ax=b) with LU Decomposition"
 ])
 
-st.title("LU Decomposition")
+st.title("Assignment 1.0")
 # File uploader for matrix A (Optional CSV upload)
 uploaded_file = st.sidebar.file_uploader("Upload a CSV file for matrix A(prefferably a converging one)", type="csv")
 
 if uploaded_file is not None:
-    b_vector = None
+    b_vector1 = None
     b_vector2 = None
     data = pd.read_csv(uploaded_file, header=None)
 
@@ -229,7 +229,7 @@ if uploaded_file is not None:
             st.error("The uploaded file must have at least 6 columns (5 for matrix A and 1 for vector b).")
     else:
             A = data.iloc[:5, :].values
-            b_vector = data.iloc[5,:].values
+            b_vector1 = data.iloc[5,:].values
             b_vector2 = data.iloc[6,:].values
 
 
@@ -243,8 +243,8 @@ if uploaded_file is not None:
 
         # Display vector b in the second column
             with col2:
-             st.subheader("Vector b:")
-             st.write(b_vector)
+             st.subheader("Vector b1:")
+             st.write(b_vector1)
             
             with col3:
                 st.subheader("Vector b2:")
@@ -259,7 +259,7 @@ else:
         [2, 1, -2, -1, 1],
         [3, 1, 2, 1, 2]
     ])
-    b_vector = np.array([1,2,3,4,5])
+    b_vector1 = np.array([1,2,3,4,5])
     b_vector2 = np.array([1,1,1,1,1])
     col1, col2 ,col3= st.columns(3)
 
@@ -270,8 +270,8 @@ else:
 
         # Display vector b in the second column
     with col2:
-             st.subheader("Vector b:(Default)")
-             st.write(b_vector)
+             st.subheader("Vector b1:(Default)")
+             st.write(b_vector1)
             
     with col3:
                 st.subheader("Vector b2:(Default)")
@@ -331,7 +331,7 @@ elif option == "💻 Eigenvalues by Power Method and Jordan Technique":
     st.subheader(f"Largest Eigenvalue: {leigenvalue}")
     st.write("Corresponding Eigenvector:", eigenvector)
 
-    result = inverse_power_method(A, b_vector)
+    result = inverse_power_method(A, b_vector1)
     if isinstance(result, str):
         st.error(result)
     else:
@@ -350,11 +350,11 @@ elif option == "🚀 Solving (Ax=b) with LU Decomposition":
     # Assume vector b as [1, 2, 3, 4, 5] for demonstration
     
     L, U = lud(A)
-    x = solve_system(L, U, b_vector)
+    x = solve_system(L, U, b_vector1)
     x1 = solve_system(L, U, b_vector2)
     co1,co2,co3,co4 = st.columns(4)
     with co1:
-     st.subheader(f"Solution x1 for Ax=b:")
+     st.subheader(f"Solution x1 for Ax=b1:")
      st.write(x)
     with co2: 
      st.subheader(f"Solution x2 for Ax=b2:")
