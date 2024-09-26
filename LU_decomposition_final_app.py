@@ -337,14 +337,14 @@ with tab1:
         st.write("Corresponding Eigenvector:", eigenvector)
       
     st.markdown('<p class="custom-subheader">Comparing Eigenvalues:\n</p>', unsafe_allow_html=True)
-    col1, col2 ,col3= st.columns(3) 
+    col1, col2 = st.columns(2) 
     with col1:
      st.markdown('<p class="custom-subheader">Eigenvalues (UL Method): \n</p>', unsafe_allow_html=True)
      st.write(UL_eigen(A)) 
-    with col2:     
-     st.write(f"Largest Eigenvalue (Power Method): \n")
+    with col2: 
+     st.markdown('<p class="custom-subheader">Largest Eigenvalue (Power Method): \n</p>', unsafe_allow_html=True)
      st.write(leigenvalue)
-     st.write(f"Smallest Eigenvalue (Inverse Power Method): {smallest_eigenvalue}\n")
+     st.markdown('<p class="custom-subheader">Smallest Eigenvalue (Inverse Power Method): {smallest_eigenvalue}\n</p>', unsafe_allow_html=True) 
      st.write(smallest_eigenvalue)
     try:
         A_inv = gauss_jordan_inverse(A)
