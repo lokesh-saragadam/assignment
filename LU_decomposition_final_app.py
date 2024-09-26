@@ -344,7 +344,7 @@ with tab1:
     with col2: 
      st.markdown('<p class="custom-subheader">Largest Eigenvalue (Power Method): \n</p>', unsafe_allow_html=True)
      st.write(leigenvalue)
-     st.markdown('<p class="custom-subheader">Smallest Eigenvalue (Inverse Power Method): {smallest_eigenvalue}\n</p>', unsafe_allow_html=True) 
+     st.markdown('<p class="custom-subheader">Smallest Eigenvalue (Inverse Power Method):\n</p>', unsafe_allow_html=True) 
      st.write(smallest_eigenvalue)
     try:
         A_inv = gauss_jordan_inverse(A)
