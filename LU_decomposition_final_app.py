@@ -210,6 +210,7 @@ option = st.sidebar.selectbox("Choose an operation", [
     "💻 Eigenvalues by Power Method and Jordan Technique",
     "🚀 Solving (Ax=b) with LU Decomposition"
 ])
+eigenvalues = np.zeros(5)
 with tab1:
  st.title("Welcome to the Home Page")
  st.title("Assignment 1.0")
