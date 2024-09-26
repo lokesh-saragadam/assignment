@@ -210,7 +210,7 @@ option = st.sidebar.selectbox("Choose an operation", [
     "💻 Eigenvalues by Power Method and Jordan Technique",
     "🚀 Solving (Ax=b) with LU Decomposition"
 ])
-eigenvalues = np.zeros(5)
+
 with tab1:
  st.title("Welcome to the Home Page")
  st.title("Assignment 1.0")
@@ -336,7 +336,7 @@ with tab1:
         st.subheader(f"Smallest Eigenvalue: {smallest_eigenvalue}")
         st.write("Corresponding Eigenvector:", eigenvector)
     st.write("Comparing Eigenvalues:\n")
-    st.write(f"Eigenvalues (UL Method): {eigenvalues}\n")
+    st.write(f"Eigenvalues (UL Method): {UL_eigen(A)}\n")
     st.write(f"Largest Eigenvalue (Power Method): {leigenvalue}\n")
     st.write(f"Smallest Eigenvalue (Inverse Power Method): {smallest_eigenvalue}\n")
     try:
