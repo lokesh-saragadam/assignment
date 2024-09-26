@@ -37,7 +37,7 @@ def shift(A):
     return np.max(np.abs(A)) + 1
 
 # Function to calculate eigenvalues using UL method
-def UL_eigen(A, iters=5000, tol=1e-10):
+def UL_eigen(A, iters=50000, tol=1e-10):
     m, n = A.shape 
     I = np.identity(n)
     shift_A = shift(A) + 1
