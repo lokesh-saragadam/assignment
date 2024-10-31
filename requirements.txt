@@ -4,4 +4,4 @@ pandas
 sympy==1.13.1
 setuptools
 scipy
-
+matplotlib
