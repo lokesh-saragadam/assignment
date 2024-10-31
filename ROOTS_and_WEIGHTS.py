@@ -108,7 +108,7 @@ else:
     if n>=2:
       st.subheader(f'Companion Matrix of the Legendre Polynomial (Degree {n})')  
       st.dataframe(companion_matrix_n.T)
-    roots, _ = np.linalg.eig(companion_matrix_n.T)
+    roots, _ = np.linalg.eig(companion_matrix_n)
     roots = np.sort(roots)
 
     weights = []
