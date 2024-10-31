@@ -143,9 +143,9 @@ else:
 if 1:
     fig, ax = plt.subplots()
     if method == 'Jacobi Matrix':
-        ax.plot(roots, weights, 'bo', label='Jacobi Matrix')
+        ax.plot(roots, weights, 'bo', label='Jacobi Matrix',grid = True)
     else:
-        ax.plot(roots, weights, 'ro', label='Companion Matrix')
+        ax.plot(roots, weights, 'ro', label='Companion Matrix',grid = True)
     ax.set_xlabel('Roots')
     ax.set_ylabel('Weights')
     ax.legend()
