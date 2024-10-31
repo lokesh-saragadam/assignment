@@ -135,6 +135,8 @@ else:
     if st.button('Save as Excel'):
         df.to_excel("polynomial_data_companion.xlsx", index=False)
         st.success("Saved as polynomial_data_companion.xlsx")
+    if n>=2:    
+      print(companion_matrix_n)    
 
 if 1:
     fig, ax = plt.subplots()
