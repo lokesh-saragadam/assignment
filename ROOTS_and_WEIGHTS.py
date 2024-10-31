@@ -136,7 +136,7 @@ else:
         df.to_excel("polynomial_data_companion.xlsx", index=False)
         st.success("Saved as polynomial_data_companion.xlsx")
 
-if n == 64:
+if 1:
     fig, ax = plt.subplots()
     if method == 'Jacobi Matrix':
         ax.plot(roots, weights, 'bo', label='Jacobi Matrix')
@@ -146,3 +146,4 @@ if n == 64:
     ax.set_ylabel('Weights')
     ax.legend()
     st.pyplot(fig)
+    print(companion_matrix_n)
