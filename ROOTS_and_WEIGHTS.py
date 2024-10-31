@@ -146,4 +146,5 @@ if 1:
     ax.set_ylabel('Weights')
     ax.legend()
     st.pyplot(fig)
+if n>=2:    
     print(companion_matrix_n)
