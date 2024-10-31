@@ -106,6 +106,7 @@ else:
     companion_matrix_n = companion_matrix_legendre(coefficients)
     companion_matrix_n = np.array(companion_matrix_n)
     if n>=2:
+      st.subheader(f'Companion Matrix of the Legendre Polynomial (Degree {n})')  
       st.dataframe(companion_matrix_n)
     roots, _ = np.linalg.eig(companion_matrix_n.T)
     roots = np.sort(roots)
