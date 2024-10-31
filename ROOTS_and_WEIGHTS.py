@@ -64,7 +64,7 @@ st.title('Gauss-Legendre Quadrature Nodes and Weights')
 
 n = st.sidebar.slider('Select Degree of Polynomial (N)', 1, 64)
 
-method = st.sidebar.radio('Select Method', ('Jacobi Matrix', 'Companion Matrix'))
+method = st.sidebar.radio('Select Method', ('Jacobi Matrix(PART-A)', 'Companion Matrix(PART-B)'))
 
 if method == 'Jacobi Matrix':
     J = jacobi_matrix(n)
