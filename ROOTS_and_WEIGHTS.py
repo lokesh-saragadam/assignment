@@ -105,6 +105,8 @@ else:
     
     companion_matrix_n = companion_matrix_legendre(coefficients)
     companion_matrix_n = np.array(companion_matrix_n)
+    if n>=2:
+      st.dataframe(companion_matrix_n)
     roots, _ = np.linalg.eig(companion_matrix_n.T)
     roots = np.sort(roots)
 
@@ -135,8 +137,7 @@ else:
     if st.button('Save as Excel'):
         df.to_excel("polynomial_data_companion.xlsx", index=False)
         st.success("Saved as polynomial_data_companion.xlsx")
-    if n>=2:    
-      print(companion_matrix_n)    
+        
 
 if 1:
     fig, ax = plt.subplots()
